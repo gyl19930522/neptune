@@ -1,6 +1,6 @@
 use paired::bls12_381::Bls12;
 use generic_array::typenum;
-use crate::poseidon::PoseidonConstants;
+use neptune::poseidon::PoseidonConstants;
 
 fn main() {
     let constants = PoseidonConstants::<Bls12, U2>::new();
