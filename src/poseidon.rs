@@ -571,6 +571,9 @@ where
     }
 
     fn add_round_constants_static(&mut self) {
+        // 1. elements是由多个Fr构成的集合, 将constants中的compressed_round_constants集合(过滤掉前constants_offset个元素)
+        // 后与elements一一配对，即[[element, round_constant], ...], 然后将element加round_constant
+        // 2. constants_offset += elements个数
         for (element, round_constant) in self.elements.iter_mut().zip(
             self.constants
                 .compressed_round_constants
@@ -714,6 +717,18 @@ mod tests {
     use ff::Field;
     use generic_array::typenum;
     use paired::bls12_381::{Bls12, Fr};
+
+    #[test]
+    fn custom2() {
+        let constants = PoseidonConstants::new();
+        println!("mds_matrices: {:?}, {:?}", constants.mds_matrices.m, constants.mds_matrices.m_hat);
+        println!("len round_constants: {:?}", constants.round_constants.len());
+        println!("len round_constants: {:?}", constants.round_constants.len());
+        println!("len compressed_round_constants: {:?}", constants.compressed_round_constants.len());
+        println!("pre_sparse_matrix: {:?}", constants.pre_sparse_matrix);
+        println!("len sparse_matrixes: {:?}", constants.sparse_matrixes.len());
+        println!("arity_tag: {:?}", constants.arity_tag);
+    }
 
     #[test]
     fn reset() {
