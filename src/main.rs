@@ -2,7 +2,7 @@ use paired::bls12_381::Bls12;
 use generic_array::typenum::{U2, U11};
 use neptune::poseidon::{PoseidonConstants, Arity};
 
-fn template(flag: bool) -> PoseidonConstants {
+fn template(flag: bool) {
     let constants = if flag {PoseidonConstants::<Bls12, U11>::new()} else {PoseidonConstants::<Bls12, U2>::new()};
     println!("mds_matrices: {:?}", constants.mds_matrices.m);
     print!("*********************************************************");
