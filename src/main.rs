@@ -29,17 +29,17 @@ fn template1() {
 fn template2() {
     let constants = PoseidonConstants::<Bls12, U11>::new();
     println!("mds_matrices: {:?}", constants.mds_matrices.m);
-    print!("*********************************************************");
+    println!("*********************************************************");
     println!("mds_matrices: {:?}", constants.mds_matrices.m_inv);
-    print!("*********************************************************");
+    println!("*********************************************************");
     println!("mds_matrices: {:?}", constants.mds_matrices.m_hat);
-    print!("*********************************************************");
+    println!("*********************************************************");
     println!("mds_matrices: {:?}", constants.mds_matrices.m_hat_inv);
-    print!("*********************************************************");
+    println!("*********************************************************");
     println!("mds_matrices: {:?}", constants.mds_matrices.m_prime);
-    print!("*********************************************************");
+    println!("*********************************************************");
     println!("mds_matrices: {:?}", constants.mds_matrices.m_double_prime);
-    print!("*********************************************************");
+    println!("*********************************************************");
     println!("len round_constants: {:?}", constants.round_constants.len());
     println!("len compressed_round_constants: {:?}", constants.compressed_round_constants.len());
     println!("pre_sparse_matrix: {:?}", constants.pre_sparse_matrix);
@@ -52,6 +52,6 @@ fn template2() {
 
 fn main() {
     template1();
-    print!("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+    println!("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
     template2();
 }
