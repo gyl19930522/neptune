@@ -1,5 +1,5 @@
 use paired::bls12_381::Bls12;
-use generic_array::typenum;
+use generic_array::typenum::U2;
 use neptune::poseidon::PoseidonConstants;
 
 fn main() {
