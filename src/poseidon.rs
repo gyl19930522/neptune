@@ -731,6 +731,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn reset() {
         let test_arity = 2;
         let preimage = vec![Scalar::one(); test_arity];
@@ -746,6 +747,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn hash_det() {
         let test_arity = 2;
         let mut preimage = vec![Scalar::zero(); test_arity];
@@ -761,6 +763,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn hash_arity_3() {
         let mut preimage: [Scalar; 3] = [Scalar::zero(); 3];
         let constants = PoseidonConstants::new();
@@ -775,6 +778,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn hash_values() {
         hash_values_aux::<typenum::U2>();
         hash_values_aux::<typenum::U4>();
@@ -876,6 +880,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn hash_compare_optimized() {
         let constants = PoseidonConstants::<Bls12, U2>::new();
         let mut p = Poseidon::<Bls12, U2>::new(&constants);
