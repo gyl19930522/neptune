@@ -720,7 +720,19 @@ mod tests {
 
     #[test]
     fn custom2() {
-        let constants = PoseidonConstants::new();
+        let constants = PoseidonConstants::<Bls12, U2>::new();
+        println!("mds_matrices: {:?}, {:?}", constants.mds_matrices.m, constants.mds_matrices.m_hat);
+        println!("len round_constants: {:?}", constants.round_constants.len());
+        println!("len round_constants: {:?}", constants.round_constants.len());
+        println!("len compressed_round_constants: {:?}", constants.compressed_round_constants.len());
+        println!("pre_sparse_matrix: {:?}", constants.pre_sparse_matrix);
+        println!("len sparse_matrixes: {:?}", constants.sparse_matrixes.len());
+        println!("arity_tag: {:?}", constants.arity_tag);
+    }
+
+    #[test]
+    fn custom11() {
+        let constants = PoseidonConstants::<Bls12, U11>::new();
         println!("mds_matrices: {:?}, {:?}", constants.mds_matrices.m, constants.mds_matrices.m_hat);
         println!("len round_constants: {:?}", constants.round_constants.len());
         println!("len round_constants: {:?}", constants.round_constants.len());
