@@ -28,4 +28,6 @@ fn template<A: Arity<Bls12::Fr>>() {
 
 fn main() {
     template<U2>();
+    print!("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+    template<U11>();
 }
